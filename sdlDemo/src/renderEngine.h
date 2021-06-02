@@ -1,10 +1,10 @@
 #pragma once
+#include <SDL.h>
 
 class renderEngine {
-private:
-	SDL_Window* gWindow = NULL;
-	SDL_Surface* gSurface = NULL;
-	SDL_Renderer* gRenderer = NULL;
+	SDL_Window* gWindow;
+	SDL_Surface* gSurface;
+	SDL_Renderer* gRenderer;
 	int height, width;
 	bool quit = false;
 	bool init();
@@ -13,4 +13,5 @@ private:
 public:
 	renderEngine(int width, int height);
 	bool start();
+	void clearScreen();
 };
